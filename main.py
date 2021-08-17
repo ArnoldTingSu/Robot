@@ -3,6 +3,7 @@ import discord
 import requests
 import json
 import random
+from replit import db
 
 
 my_secret = os.environ['COIN']
@@ -18,7 +19,12 @@ queryWords= [
   "what",
   "need",
   "suggestion",
-  "suggestions"
+  "suggestions",
+  "help",
+  "wonder",
+  "curious",
+  "where",
+  "when"
 ]
 
 queryDict = {
@@ -27,10 +33,14 @@ queryDict = {
 }
 
 queryStarterConvo = [
-  "I know a solution",
+  "I know a solution...",
   "I may have a suggestion...",
   "I can help you with that!",
-  "I'm a helper, I can look that up for you!"
+  "I'm a helper, I can look that up for you!",
+  "Do you need help?",
+  "Can I look that up fory you?",
+  "I can show you pictures of that place.",
+  "Let me enlighten you."
 ]
 
 def get_quote():
